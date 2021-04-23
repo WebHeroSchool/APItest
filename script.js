@@ -6,7 +6,7 @@ fetch(url)
     .then(res => res.json())
     .then(json => {
         console.log(json.avatar_url);
-        console.log(json.name);
+        console.log(json.nick);
         console.log(json.bio);
         console.log(json.html_url);
 
@@ -20,7 +20,7 @@ fetch(url)
         } else {
             name.innerHTML = 'Неизвестно';
         }
-        body.append(name);
+        body.append(nick);
 
         let bio = document.createElement('p');
         if (json.bio != null) {
